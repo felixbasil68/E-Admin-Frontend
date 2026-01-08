@@ -1,0 +1,168 @@
+/* Main Styles with Color Palette */
+:root {
+    --primary-light: #EBF4DD;
+    --primary-medium: #90AB8B;
+    --primary-dark: #5A7863;
+    --primary-darker: #3B4953;
+    --accent-danger: #FF6B6B;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content wrapper */
+.content-wrapper {
+    flex: 1 0 auto;
+    padding-bottom: 20px;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-img-wrapper {
+    position: relative;
+}
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+/* Rating stars */
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.filled-star {
+    color: #FFD700;
+    fill: #FFD700;
+}
+
+.empty-star {
+    color: #ccc;
+}
+
+.rating-small .filled-star {
+    color: #FFD700;
+    fill: #FFD700;
+}
+
+.rating-small .empty-star {
+    color: #ddd;
+}
+
+/* Stat cards */
+.stat-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.stat-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ad card animation */
+.ad-card {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(90, 120, 99, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(90, 120, 99, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(90, 120, 99, 0);
+    }
+}
+
+/* Form controls */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-medium);
+    box-shadow: 0 0 0 0.25rem rgba(144, 171, 139, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.table-hover tbody tr:hover {
+    background-color: rgba(235, 244, 221, 0.5) !important;
+}
+
+/* Badge styles */
+.badge {
+    padding: 5px 10px;
+    font-weight: 500;
+}
+
+/* Progress bars */
+.progress {
+    background-color: #e0e0e0;
+}
+
+/* Navbar active link */
+.nav-link.active {
+    background-color: var(--primary-dark);
+    color: white !important;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    flex-shrink: 0;
+}
+
+/* Stock indicators */
+.stock-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    .table-responsive {
+        font-size: 14px;
+    }
+}
